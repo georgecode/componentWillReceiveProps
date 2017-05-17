@@ -9515,30 +9515,29 @@ module.exports = getIteratorFn;
 
 var React = __webpack_require__(50);
 
-module.exports = React.createClass({
-  displayName: "exports",
+class Test extends React.Component {
+	render() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(
+				'h1',
+				null,
+				'zzzHELLO'
+			)
+		);
+	}
+}
 
-  render: function () {
-    return (
-      // <h1>Hello React</h1>
-      React.createElement(
-        "div",
-        { className: "helloContainer" },
-        React.createElement(
-          "h1",
-          { className: "hello" },
-          "Hello React"
-        ),
-        React.createElement(
-          "h2",
-          null,
-          "TWO plus TWO equals ",
-          2 + 2
-        )
-      )
-    );
-  }
-});
+module.exports = class extends React.Component {
+	render() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(Test, null)
+		);
+	}
+};
 
 /***/ }),
 /* 82 */
