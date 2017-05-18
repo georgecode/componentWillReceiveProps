@@ -7,7 +7,12 @@ ReactDOM.render(
   document.getElementById('app')
   );
 
-
+setTimeout(function () {
+	ReactDOM.render(
+	 <App newShit="HELLO it works" />,
+  	document.getElementById('app')
+	);
+}, 5000);
 
 
 //*******************

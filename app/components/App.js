@@ -1,25 +1,5 @@
 var React = require('react');
 
-// class Test extends React.Component{
-// 	render(){
-// 		return(
-// 			<div>
-// 			<h1>zzzHELLO</h1>
-// 			</div>
-// 			)
-// 	}
-// }
-
-
-// module.exports = class extends React.Component{
-// 	render(){
-// 		return(
-// 			<div>
-// 				<Test />
-// 			</div>
-// 			)
-// 	}
-// }
 
 class Example extends React.Component{
 	constructor(props,context){
@@ -45,10 +25,9 @@ class Example extends React.Component{
 	}
 
 	clickShit(){
-  		console.log("is this even working??")
-  		console.log(this.props.text)
-  		this.state.subtext = "WTF WTF";
-  		console.log(this.props.text)
+  		console.log(this.state.title +"XXXXXXXXX")
+  		this.state.title = "this is an update to state";
+  		console.log(this.state.title)
 	}
 
 	render(){
@@ -71,6 +50,23 @@ module.exports = class extends React.Component{
 			</div>
 			)
 	}
+
+
+	// setTimeout(()=> {
+	// 	console.log("please  work")
+	// 	// render(){
+	// 	// 	return(
+	// 	// 		<div>
+	// 	// 			<Example text="XXXXXXXXX" />
+	// 	// 		</div>				
+	// 	// 	)
+	// 	// }
+	// 	// render(
+	//  // 	<Example text="holy funnk it finally works" />,
+	// 	// );
+
+
+	// }, 5000);
 }
 
 
